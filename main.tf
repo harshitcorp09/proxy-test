@@ -1,14 +1,5 @@
-resource "null_resource" "null" {
-  triggers = {
-    always_run = timestamp()
-  }
-
-  provisioner "local-exec" {
-    command = "env"
-  }
-
-}
-resource "time_sleep" "wait_30_seconds" {
-depends_on = [null_resource.null]
-create_duration = "3000s"
+resource "random_password" "password" {
+  length           = 16
+  special          = true
+  override_special = "!#$%&*()-_=+[]{}<>:?"
 }
