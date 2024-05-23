@@ -9,5 +9,6 @@ resource "null_resource" "null" {
 
 }
 resource "time_sleep" "wait_30_seconds" {
-  create_duration = "300s"
+depends_on = [null_resource.null]
+create_duration = "3000s"
 }
