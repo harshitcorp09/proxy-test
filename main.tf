@@ -1,13 +1,3 @@
-terraform {
-  cloud {
-    hostname = "harshit-tfe-fdo-docker-mounted-disk.tf-support.hashicorpdemo.com"
-    organization = "cli-driven"
-
-    workspaces {
-      name = "test"
-    }
-  }
-}
 provider "aws" {
  region = "ap-south-1"
 }
